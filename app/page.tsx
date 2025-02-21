@@ -118,7 +118,7 @@ export default function Home() {
                    I am an AI and software developer passionate about building impactful solutions that bridge technology and real-world applications. My work spans machine learning, web development, cybersecurity, and IoT, with a strong focus on AI-driven healthcare solutions.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                <a href="mailto:your-email@example.com">
+                <a href="mailto:shaikhfaayeez.com">
                   <Button className="transition-all hover:scale-105">
                     <Mail className="w-4 h-4 mr-2" />
                     Contact
