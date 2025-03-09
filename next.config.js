@@ -7,6 +7,7 @@ const withPWA = require("next-pwa")({
 
 const nextConfig = withPWA({
   //output: "export",
+  output: process.env.VERCEL ? undefined : 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
