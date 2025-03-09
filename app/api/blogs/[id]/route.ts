@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
-type Params = {
-  params: {
-    id: string;
-  };
-};
+// Add this line for static export
+export const dynamic = 'force-dynamic';
 
-export async function GET(request: NextRequest, { params }: Params) {
+// The correct typing for route parameters in Next.js App Router
+export async function GET(
+  request: NextRequest,
+  { params }: { params: { id: string } }
+) {
   const id = parseInt(params.id);
 
   if (isNaN(id)) {
