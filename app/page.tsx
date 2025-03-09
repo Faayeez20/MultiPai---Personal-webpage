@@ -1,12 +1,13 @@
 "use client";
 
-import { Github, Linkedin, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, ExternalLink, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Image from 'next/image';
+import Link from 'next/link';
 import { fadeIn, fadeInUp, scaleIn } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
@@ -139,6 +140,12 @@ export default function Home() {
                   </Button>
                   </a>
 
+                  <Link href="/blog">
+                    <Button variant="outline" className="transition-all hover:scale-105">
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Blog
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
