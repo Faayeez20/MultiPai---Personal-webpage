@@ -1,12 +1,11 @@
 import BlogPost from "@/components/BlogPost";
 
-interface BlogDetailPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
+// Make sure to align with Next.js's expected types
+export default async function BlogDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const id = parseInt(params.id);
 
   return (
