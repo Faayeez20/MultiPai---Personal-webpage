@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
+// Add this line for static export
 export const dynamic = 'force-dynamic';
 
-// The params object should be properly typed and handled
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
-  // No need to await params - it's passed directly in the object parameter
+// Update to handle async params
+export async function GET(request: NextRequest, context: any) {
+  // Await the params object
+  const params = context.params;
   const id = parseInt(params.id);
 
   if (isNaN(id)) {
