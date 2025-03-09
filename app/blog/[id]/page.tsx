@@ -1,12 +1,12 @@
 import BlogPost from "@/components/BlogPost";
 
-type BlogDetailPageProps = {
+interface BlogDetailPageProps {
   params: {
     id: string;
   };
-};
+}
 
-export default function BlogDetailPage({ params }: BlogDetailPageProps) {
+export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const id = parseInt(params.id);
 
   return (
